@@ -32,11 +32,13 @@ class PhilHealthPatient(Patient):
         return original_bill * 0.85
 
 if __name__ == "__main__":
-    patient1 = Patient(input("Patient Name: "), 10000.0)
+    print("Hospital Billing System")
+    print("=======================")
+    patient1 = Patient(input("Patient Name: "), float(input("Cost: ")))
     print(f"Patient: {patient1.get_name()} | Final Bill: ₱{patient1.calculate_bill():,.2f}")
 
-    patient2 = SeniorPatient(input("Senior Patient Name: "), 10000.0)
+    patient2 = SeniorPatient(input("Senior Patient Name: "), float(input("Cost: ")))
     print(f"Senior Patient: {patient2.get_name()} | Final Bill: ₱{patient2.calculate_bill():,.2f}")
 
-    patient3 = PhilHealthPatient(input("PhilHealth Patient Name: "), 10000.0)
+    patient3 = PhilHealthPatient(input("PhilHealth Patient Name: "), float(input("Cost: ")))
     print(f"PhilHealth Patient: {patient3.get_name()} | Final Bill: ₱{patient3.calculate_bill():,.2f}")
